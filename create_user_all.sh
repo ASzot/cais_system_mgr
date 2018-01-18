@@ -19,5 +19,7 @@ username=$1
 declare -a servers=('10.14.111.183' '10.14.167.159')
 for i in "${servers[@]}"
 do
-  ssh -t $2@$i "cd cais_system_mgr && git fetch origin master && sh ~/cais_system_mgr/create_users.sh jacob asdf"
+  ssh -t $2@$i "cd cais_system_mgr && git fetch origin master && sh ~/cais_system_mgr/create_users.sh $username $rand_pass"
 done
+
+echo $rand_pass
