@@ -11,15 +11,15 @@ Please follow these rules.
 - Connecting: Unfortunately, you need to be on the USC Secure network to connect to
   these machines.
 - Running programs:
-  - *If you are running a deep learning program always check that nobody else is using the GPU you want to use.* Use the command `nvidia-smi` to check GPU usage.
-  - *Only run your programs on one GPU* This may require changing your code a
+  - **If you are running a deep learning program always check that nobody else is using the GPU you want to use.** Use the command `nvidia-smi` to check GPU usage.
+  - **Only run your programs on one GPU** This may require changing your code a
     little bit. Check this post out for how to use only certain GPUs
     https://github.com/keras-team/keras/issues/6031.
   - The bottleneck of both systems is the CPU. Don't run jobs that hog all of
     the CPU. Be careful about the number of cores you are using on some of the
     sklearn functions.
 - Anaconda:
-  - Every user shares the *same* Anaconda distribution. That means everyone has
+  - Every user shares the **same** Anaconda distribution. That means everyone has
     same environments. So if you're using an environment at the same time as
     someone else watch out for installs. 
   - All servers have a conda environment named `tf` do NOT install any packages
