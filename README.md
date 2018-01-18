@@ -70,8 +70,8 @@ a remote machine.
 
 The easiest way is to get a SFTP client. This will allow you to transfer files
 on your compute to the remote computer over SFTP (file transfer over SSH). For
-Mac I recommend (Cyberduck)[https://cyberduck.io/?l=en]. For Windows I
-recommend (Filezilla)[https://filezilla-project.org/]. You should be able to
+Mac I recommend [Cyberduck](https://cyberduck.io/?l=en). For Windows I
+recommend [Filezilla](https://filezilla-project.org/). You should be able to
 connect and see the remote machine file system as well as your own file system
 on both of these programs. I am not very familiar with Filezilla but I know
 that on Cyberduck you can edit files on the remote computer's filesystem from a
@@ -87,7 +87,7 @@ into the server using SSH. If you're on Mac or Linux just use the SSH command
 (`ssh yourusername@serverip`). You will then be prompted for your password. Of
 course if you want you can add your public key on the remote machine so you
 don't have to worry about typing your password every time. On Windows use
-(PuTTY)[http://www.putty.org/]. Now that you're connected remotely to the
+[PuTTY](http://www.putty.org/). Now that you're connected remotely to the
 server you can use the command line like you normally would. 
 
 An issue you will run into is everytime you close your laptop the SSH session
