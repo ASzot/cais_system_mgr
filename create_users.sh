@@ -13,9 +13,6 @@ if [ -z "$2" ]
     exit 1
 fi
 
-
-#rand_pass=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 10 | head -n 1)
-
 create_user_account () {
   username=$1
   password=$2
