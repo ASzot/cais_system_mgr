@@ -16,10 +16,19 @@ echo $rand_pass
 username=$1
 # List all servers here.
 
-declare -a servers=('10.14.111.183' '10.14.167.159')
+declare -a servers=('68.181.99.173' '68.181.99.165')
 for i in "${servers[@]}"
 do
-  ssh -t $2@$i "cd cais_system_mgr && git fetch origin master && sh ~/cais_system_mgr/create_users.sh $username $rand_pass"
+  echo "$i"
+
+  read -p "Continue [Y/n]?" confirm
+
+  while [[ $confirm = [yY] ]]
+  do
+    ssh -t $2@$i "cd cais_system_mgr && git fetch origin master && sh ~/cais_system_mgr/create_users.sh $username $rand_pass"
+    read -p "Continue [Y/n]?" confirm
+  done
+
 done
 
 echo $rand_pass

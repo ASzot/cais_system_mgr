@@ -102,12 +102,16 @@ program running even when you are logged out. For that use tmux session.
 - Your program will still be running and you can see the output of it!
 
 ## Servers
-- Server 1: 10.14.111.183
+- Server 1: 68.181.99.173
   - Two TitanX GPUs
-  - 1TB of HDD storage
-- Server 2: 10.14.167.159
-  - One TitanX GPU
-  - 30GB of SSD storage (1TB of HDD coming soon)
+  - 1TB SSD
+  - i7 7700K CPU
+  - 32GB RAM
+- Server 2: 68.181.99.165
+  - Two TitanX GPUs
+  - 1TB SSD
+  - i7 7700K CPU
+  - 32GB RAM
 
 ## System Ops
 - Create a new user
