@@ -19,7 +19,9 @@ create_user_account () {
 
   sudo adduser $username --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
   echo "$username:$password" | sudo chpasswd
-  mkdir /hdd/users/$username
+  mkdir -p /hdd/users/$username
 }
 
 create_user_account $1 $2
+
+sudo chown -R caispp:caispp /home/$1/
