@@ -11,7 +11,7 @@ if [ -z "$2" ]
     exit 1
 fi
 
-rand_pass=$(openssl rand -base64 6)
+rand_pass=$(openssl rand -base64 9)
 echo $rand_pass
 username=$1
 # List all servers here.

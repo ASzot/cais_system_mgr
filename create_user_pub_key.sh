@@ -31,7 +31,7 @@ do
 
   while [[ $confirm = [yY] ]]
   do
-    ssh -t $2@$i "cd cais_system_mgr && git fetch origin master && sh ~/cais_system_mgr/create_users.sh $username $rand_pass"
+    ssh -t $2@$i "cd cais_system_mgr && git fetch origin master && git reset --hard origin/master && sh ~/cais_system_mgr/create_users.sh $username $rand_pass"
     read -p "Continue [Y/n]?" confirm
   done
 done

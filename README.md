@@ -1,6 +1,19 @@
 # CAIS++ GPU Server Manager
 Managing scripts and information for the CAIS++ GPU servers 
 
+## Server Connection Info
+- Bruce: 68.181.99.173
+  - Two TitanX GPUs
+  - 1TB SSD
+  - i7 7700K CPU
+  - 32GB RAM
+- Dick: 68.181.99.165
+  - Two TitanX GPUs
+  - 1TB SSD
+  - i7 7700K CPU
+  - 32GB RAM
+
+
 ## Usage
 If you don't know what you're doing with working on remote machines please see
 the "Getting Started" section first.
@@ -33,10 +46,7 @@ Please follow these rules.
     environment.
 - Data
   - The folders that you should be using are `/home/yourusername` (the starting
-    directory), `/hdd/datasets` and `/hdd/users/yourusername`. Don't save a ton
-    of data to `/home/yourusername`. This will be saved on the SSD (solid state
-    drive) memory. Everything on `/hdd` is saved to HDD (hard disk drive)
-    memory (which is slower but much cheaper and we have a lot more of it). 
+    directory), `/hdd/datasets` and `/hdd/users/yourusername`.  
   - `/hdd/datasets` is a public place to keep datasets for everyone to use. For
     instance if you want to use the CIFAR dataset first check that it doesn't
     already exist in `/hdd/datasets` and if doesn't download it there so other
@@ -101,17 +111,6 @@ program running even when you are logged out. For that use tmux session.
 - `tmux a -t 0` to attach to the first tmux session from the `tmux ls` list.
 - Your program will still be running and you can see the output of it!
 
-## Servers
-- Server 1: 68.181.99.173
-  - Two TitanX GPUs
-  - 1TB SSD
-  - i7 7700K CPU
-  - 32GB RAM
-- Server 2: 68.181.99.165
-  - Two TitanX GPUs
-  - 1TB SSD
-  - i7 7700K CPU
-  - 32GB RAM
 
 ## System Ops
 - Create a new user
