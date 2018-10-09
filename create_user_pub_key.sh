@@ -45,9 +45,13 @@ do
   while [[ $confirm = [yY] ]]
   do
     cat $3 | ssh $2@$i "mkdir -p /home/$1/.ssh/; cat >> /home/$1/.ssh/authorized_keys"
+
+    ssh -t $2@$i "cd cais_system_mgr && sh rechown.sh $1"
     read -p "Continue [Y/n]?" confirm
   done
 done
+
+
 
 
 echo $rand_pass
