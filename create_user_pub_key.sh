@@ -22,7 +22,7 @@ echo $rand_pass
 username=$1
 # List all servers here.
 
-declare -a servers=('68.181.99.173' '68.181.99.165')
+declare -a servers=('68.181.99.174' '68.181.99.165')
 for i in "${servers[@]}"
 do
   echo "$i"

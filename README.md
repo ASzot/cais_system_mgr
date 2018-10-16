@@ -21,8 +21,6 @@ the "Getting Started" section first.
 ### General
 Please follow these rules.
 - Contact Andrew Szot if you need sudo for anything. 
-- Connecting: Unfortunately, you need to be on the USC Secure network to connect to
-  these machines.
 - Running programs:
   - **If you are running a deep learning program always check that nobody else is using the GPU you want to use.** Use the command `nvidia-smi` to check GPU usage.
   - **Only run your programs on one GPU** This may require changing your code a
@@ -39,9 +37,7 @@ Please follow these rules.
     to this environment. This environment is a base keras/tensorflow
     environment. I hope to keep it updated with everything a project should
     need. 
-  - You can clone the base `tf` conda environment as a quick starting place (so
-    you don't have to install tensorflow for the GPU again which can be a
-    pain). Look up how to clone conda environments.
+  - All servers also have a conda environment named `pt` for PyTorch. 
   - Don't use virtualenv or pip install anything without being in a conda
     environment.
 - Data
