@@ -2,7 +2,7 @@
 Managing scripts and information for the CAIS++ GPU servers 
 
 ## Server Connection Info
-- Bruce: 68.181.99.173
+- Bruce: 68.181.99.174
   - Two TitanX GPUs
   - 1TB SSD
   - i7 7700K CPU
@@ -61,16 +61,15 @@ you're having any difficulties just contact me.
 ### Getting Started
 These GPUs are avaliable for use on CAIS++ projects. The first thing you need
 is a user account. If you need a user account just message Andrew Szot on
-Slack with the username that you want. I will then give you your password. You
-will be able to log into all of the CAIS++ machines with this same account. Of
-course you can change your password if you want (you will have to change it
-independently on each machine). 
+Slack with the username that you want along with your ssh public key. You
+will be able to log into all of the CAIS++ machines with this same account (you
+don't need to specify a password because of your ssh key). 
 
 ### Connecting to the Machine
 **Only read this section if you don't know how to work on a remote
 machine**
 
-Now that you have your username and password you are ready to connect to a
+Now that you have your username you are ready to connect to a
 machine. Go to the "servers" section of this README for the list of servers
 that you can connect to. Maybe check the "servers" slack channel for
 server avaliability. Now you have an IP that you want to connect to.
@@ -111,29 +110,3 @@ program running even when you are logged out. For that use tmux session.
 - `tmux a -t 0` to attach to the first tmux session from the `tmux ls` list.
 - Your program will still be running and you can see the output of it!
 
-
-## System Ops
-- Create a new user
-  - sh `create_user_all.sh username` You will be prompted to enter passwords for hostuser on server 1 and then server 2.
-
-## Setting up a New Machine
-- Download and install miniconda3 to `/opt/conda/`
-- `sudo chmod -R 777 /opt/conda/`
-- `sudo chmod -R 777 /hdd/ (same for any other drives)`
-- Add
-  ```
-  export PATH="/opt/conda/miniconda3/bin:$PATH"
-  export PATH=/usr/local/cuda/bin:/usr/local/cuda/lib64:$PATH
-  export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-  ```
-  to `/etc/skel/`
-- Create file `/opt/conda/.condarc` and add
-  ```
-  envs_dirs:
-    - /opt/conda/envs
-  pkgs_dirs:
-    - /opt/conda/packages
-  ```
-  Be sure to not create existing directories. Conda needs to create the
-  directories itself.
-- Watch out for conflicts in versions of CUDA, CuDNN and TensorFlow.
