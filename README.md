@@ -2,12 +2,12 @@
 Managing scripts and information for the CAIS++ GPU servers 
 
 ## Server Connection Info
-- Bruce: 68.181.99.174
+- Dick: 68.181.99.174
   - Two TitanX GPUs
   - 1TB SSD
   - i7 7700K CPU
   - 32GB RAM
-- Dick: 68.181.99.165
+- Bruce: 68.181.99.165
   - Two TitanX GPUs
   - 1TB SSD
   - i7 7700K CPU
