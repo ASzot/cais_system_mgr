@@ -22,7 +22,7 @@ echo $rand_pass
 username=$1
 # List all servers here.
 
-declare -a servers=('68.181.99.174' '68.181.99.171')
+declare -a servers=('seg@seg.cais.plus' 'fault@fault.cais.plus')
 for i in "${servers[@]}"
 do
   echo "$i"
@@ -31,7 +31,7 @@ do
 
   while [[ $confirm = [yY] ]]
   do
-    ssh -t $2@$i "cd cais_system_mgr && git fetch origin master && git reset --hard origin/master && sh ~/cais_system_mgr/create_users.sh $username $rand_pass"
+    ssh -t $i "cd cais_system_mgr && git fetch origin master && git reset --hard origin/master && sh ~/cais_system_mgr/create_users.sh $username $rand_pass"
     read -p "Continue [Y/n]?" confirm
   done
 done
@@ -46,7 +46,7 @@ do
   do
     cat $3 | ssh $2@$i "mkdir -p /home/$1/.ssh/; cat >> /home/$1/.ssh/authorized_keys"
 
-    ssh -t $2@$i "cd cais_system_mgr && sh rechown.sh $1"
+    ssh -t $i "cd cais_system_mgr && sh rechown.sh $1"
     read -p "Continue [Y/n]?" confirm
   done
 done
