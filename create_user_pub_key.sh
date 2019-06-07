@@ -7,12 +7,6 @@ fi
 
 if [ -z "$2" ]
   then
-    echo "Must specify host username"
-    exit 1
-fi
-
-if [ -z "$3" ]
-  then
     echo "Must specify public key"
     exit 1
 fi
@@ -44,14 +38,12 @@ do
 
   while [[ $confirm = [yY] ]]
   do
-    cat $3 | ssh $2@$i "mkdir -p /home/$1/.ssh/; cat >> /home/$1/.ssh/authorized_keys"
+    cat $2 | ssh $i "mkdir -p /home/$1/.ssh/; cat >> /home/$1/.ssh/authorized_keys"
 
     ssh -t $i "cd cais_system_mgr && sh rechown.sh $1"
     read -p "Continue [Y/n]?" confirm
   done
 done
-
-
 
 
 echo $rand_pass
