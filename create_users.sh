@@ -24,4 +24,4 @@ create_user_account () {
 
 create_user_account $1 $2
 
-#sudo chown -R caispp:caispp /home/$1/
+sudo chown -R $USER:$USER /home/$1/
